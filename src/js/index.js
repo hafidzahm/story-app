@@ -1,4 +1,4 @@
 // Import our custom CSS
-import '../sass/main.scss';
+import "../sass/main.scss";
 
-console.log('Do your work here!');
+console.log("Do your work here!");

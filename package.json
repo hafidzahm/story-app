@@ -1,9 +1,14 @@
 {
   "name": "story-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Story App is an app created to make stories between users",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack serve --config webpack.dev.js",
+    "prettier-check": "prettier --check .",
+    "prettier-format": "prettier --write .",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "keywords": [],
   "author": "your_name <your_email>",
@@ -17,6 +22,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
     "html-webpack-plugin": "^5.5.0",
+    "onchange": "^7.1.0",
     "postcss-loader": "^7.0.1",
     "prettier": "2.7.1",
     "sass": "^1.56.1",
