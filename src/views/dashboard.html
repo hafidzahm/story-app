@@ -14,7 +14,9 @@
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">
+            <img src="favicon.png" alt="" style="max-height: 50px"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -27,12 +29,12 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Tambah Cerita</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -42,32 +44,25 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Bahasa
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Indonesia</a></li>
                   <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
+                  <li><a class="dropdown-item" href="#">Inggris</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link dropdown" href="#">
+                  <i class="bi bi-person-circle"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -75,6 +70,9 @@
 
     <main>
       <div class="col-lg-6 p-5 m-auto">
+        <div class="text-center">
+          <h1>Setiap ketukan, sebuah kisah baru.</h1>
+        </div>
         <div class="row row-cols-1 grid gap-4">
           <div class="card p-2 g-col-6">
             <img
@@ -160,6 +158,9 @@
 
     <footer>
       <!-- Your footer -->
+      <div class="main-footer bg-dark">
+        <div class="container px-3 py-4"><%= footerContent %></div>
+      </div>
     </footer>
   </body>
 </html>

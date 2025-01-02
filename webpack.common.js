@@ -36,7 +36,7 @@ const htmlWebpackPluginConfig = {
       </ul>
     `,
     footerContent:
-      '<p class="text-center text-white mb-0">Made with ❤ by Dicoding Indonesia</p>',
+      '<p class="text-center text-white mb-0">Made with ❤ by Hafidz</p>',
   },
 };
 
@@ -80,6 +80,7 @@ module.exports = {
       title: "Dashboard",
       filename: "index.html",
       template: path.resolve(__dirname, "src/views/dashboard.html"),
+      ...htmlWebpackPluginConfig,
     }),
 
     new CopyWebpackPlugin({
