@@ -10,30 +10,60 @@ const htmlWebpackPluginConfig = {
     "theme-color": "#4285f4",
   },
   templateParameters: {
-    brandName: "Money Tracker App",
+    brandName: "Story App",
     navLinks: `
-      <ul class="navbar-nav ms-auto mb-2 mb-md-0 d-flex align-items-center gap-3">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="favicon.png" alt="" style="max-height: 50px"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="/">Dashboard</a>
+          <a class="nav-link active" aria-current="page" href="#">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add Record</a>
+          <a class="nav-link" href="#">Tambah Cerita</a>
         </li>
-        <li class="nav-item dropdown d-none" id="userLoggedMenu">
-          <a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <div style="width: 35px;height: 35px" class="me-2 d-inline-block">
-              <img id="imgUserLogged" class="img-fluid rounded-pill" src="" alt="">
-            </div>
-            <span id="nameUserLogged"></span>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Bahasa
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" id="userLogOut" href="#">Log Out</a></li>
+            <li><a class="dropdown-item" href="#">Indonesia</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Inggris</a></li>
           </ul>
         </li>
-        <li class="nav-item" id="loginMenu">
-          <a class="nav-link" href="#">Log In</a>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
+      <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link dropdown" href="#">
+            <i class="bi bi-person-circle"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
     `,
     footerContent:
       '<p class="text-center text-white mb-0">Made with ❤ by Hafidz</p>',
@@ -77,7 +107,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Dashboard",
+      title: "Beranda",
       filename: "index.html",
       template: path.resolve(__dirname, "src/views/dashboard.html"),
       ...htmlWebpackPluginConfig,
