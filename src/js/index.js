@@ -3,11 +3,16 @@ console.log("Do your work here!");
 import "../scss/main.scss";
 
 // Import javascript file as needed
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/Dashboard";
+import MyProfile from "./pages/profile/me";
+import AddStory from "./pages/stories/add";
 import * as bootstrap from "bootstrap";
 
 const routes = {
   "/": Dashboard,
+  '/profile/me.html': MyProfile,
+  '/stories/add.html': AddStory,
+
 };
 
 const detectRoute = () => routes[window.location.pathname];

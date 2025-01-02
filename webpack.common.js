@@ -10,59 +10,56 @@ const htmlWebpackPluginConfig = {
     "theme-color": "#4285f4",
   },
   templateParameters: {
-    brandName: "Story App",
+    brandImage: `<img src="favicon.png" alt="" style="max-height: 50px">`,
     navLinks: `
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="favicon.png" alt="" style="max-height: 50px"
-    /></a>
     <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tambah Cerita</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Bahasa
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Indonesia</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Inggris</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav d-flex mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link dropdown" href="#">
-            <i class="bi bi-person-circle"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/"
+          >Beranda</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/stories/add.html">Tambah Cerita</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Bahasa
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Indonesia</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Inggris</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav d-flex mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link dropdown" href="/profile/me.html">
+          <i class="bi bi-person-circle"></i>
+        </a>
+      </li>
+    </ul>
   </div>
     `,
     footerContent:
@@ -111,6 +108,23 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "src/views/dashboard.html"),
       ...htmlWebpackPluginConfig,
+      brandImg: `<img src="src/public/favicon.png" alt="" style="max-height: 50px">`
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "Tambah Cerita",
+      filename: "stories/add.html",
+      template: path.resolve(__dirname, "src/views/stories/add.html"),
+      ...htmlWebpackPluginConfig,
+      brandImg: `<img src="src/public/favicon.png" alt="" style="max-height: 50px">`
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "Profilku",
+      filename: "profile/me.html",
+      template: path.resolve(__dirname, "src/views/profile/me.html"),
+      ...htmlWebpackPluginConfig,
+      brandImg: `<img src="src/public/favicon.png" alt="" style="max-height: 50px">`
     }),
 
     new CopyWebpackPlugin({
