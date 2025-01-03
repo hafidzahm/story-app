@@ -69,7 +69,7 @@ const htmlWebpackPluginConfig = {
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, "src/js/index.js"),
+    app: "./src/js/index.js",
   },
   output: {
     filename: "[name].bundle.js",
