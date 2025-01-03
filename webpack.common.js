@@ -108,7 +108,6 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "src/views/dashboard.html"),
       ...htmlWebpackPluginConfig,
-      brandImg: `<img src="src/public/favicon.png" alt="" style="max-height: 50px">`
     }),
 
     new HtmlWebpackPlugin({
@@ -116,7 +115,6 @@ module.exports = {
       filename: "stories/add.html",
       template: path.resolve(__dirname, "src/views/stories/add.html"),
       ...htmlWebpackPluginConfig,
-      brandImg: `<img src="src/public/favicon.png" alt="" style="max-height: 50px">`
     }),
 
     new HtmlWebpackPlugin({
@@ -124,7 +122,6 @@ module.exports = {
       filename: "profile/me.html",
       template: path.resolve(__dirname, "src/views/profile/me.html"),
       ...htmlWebpackPluginConfig,
-      brandImg: `<img src="src/public/favicon.png" alt="" style="max-height: 50px">`
     }),
 
     new CopyWebpackPlugin({
