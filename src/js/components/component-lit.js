@@ -1,1 +1,2 @@
 import "./CardStory";
+import "./FooterApp";

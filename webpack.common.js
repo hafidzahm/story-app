@@ -62,8 +62,6 @@ const htmlWebpackPluginConfig = {
     </ul>
   </div>
     `,
-    footerContent:
-      '<p class="text-center text-white mb-0">Made with ❤ by Hafidz</p>',
   },
 };
 
