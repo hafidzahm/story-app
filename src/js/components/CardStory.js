@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
-import datas from "../components/data/data.json";
+import datas from "../data/data.json";
 
 class CardStory extends LitWithoutShadowDom {
   static properties = {
