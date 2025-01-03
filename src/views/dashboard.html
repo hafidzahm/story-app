@@ -14,9 +14,7 @@
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">
-            <%= brandImage %>
-          </a>
+          <a class="navbar-brand" href="/"> <%= brandImage %> </a>
           <%= navLinks %>
         </div>
       </nav>
@@ -24,106 +22,16 @@
 
     <main>
       <div class="col-lg-6 grid gap-0 row-gap-3 m-auto">
-        <div class="text-center py-4 grid gap-4">
-          <h1>Setiap ketukan, sebuah kisah baru.</h1>
-        </div>
-        <div class="p-2 g-col-6 py-4">
-          <div class="card p-2 g-col-6">
-            <div class="card-body">
-              <h5 class="card-title border-bottom py-3">
-                <i class="bi bi-person-circle"></i> | @mark
-              </h5>
-              <img
-                src="favicon.png"
-                class="card-img-top p-2"
-                style="max-height: 200px; object-fit: cover"
-                alt="..."
-              />
-              <p class="card-text border-top pt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                numquam minima. Ipsum recusandae culpa corporis dolorem eum
-                totam repellat nisi, nobis earum inventore velit aliquid,
-                officia dolore, reprehenderit architecto. A!
-              </p>
-              <h5 class="card-subtitle fs-6">-Senin, 12 Desember 2012</h5>
-            </div>
-          </div>
-        </div>
-        <div class="p-2 g-col-6">
-          <div class="card p-2 g-col-6">
-            <div class="card-body">
-              <h5 class="card-title border-bottom py-3">
-                <i class="bi bi-person-circle"></i> | @mark
-              </h5>
-              <img
-                src="favicon.png"
-                class="card-img-top p-2"
-                style="max-height: 200px; object-fit: cover"
-                alt="..."
-              />
-              <p class="card-text border-top pt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                numquam minima. Ipsum recusandae culpa corporis dolorem eum
-                totam repellat nisi, nobis earum inventore velit aliquid,
-                officia dolore, reprehenderit architecto. A!
-              </p>
-              <h5 class="card-subtitle fs-6">-Senin, 12 Desember 2012</h5>
-            </div>
-          </div>
-        </div>
-        <div class="p-2 g-col-6">
-          <div class="card p-2 g-col-6">
-            <div class="card-body">
-              <h5 class="card-title border-bottom py-3">
-                <i class="bi bi-person-circle"></i> | @mark
-              </h5>
-              <img
-                src="favicon.png"
-                class="card-img-top p-2"
-                style="max-height: 200px; object-fit: cover"
-                alt="..."
-              />
-              <p class="card-text border-top pt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                numquam minima. Ipsum recusandae culpa corporis dolorem eum
-                totam repellat nisi, nobis earum inventore velit aliquid,
-                officia dolore, reprehenderit architecto. A!
-              </p>
-              <h5 class="card-subtitle fs-6">-Senin, 12 Desember 2012</h5>
-            </div>
-          </div>
-        </div>
-        <div class="p-2 g-col-6">
-          <div class="card p-2 g-col-6">
-            <div class="card-body">
-              <h5 class="card-title border-bottom py-3">
-                <i class="bi bi-person-circle"></i> | @mark
-              </h5>
-              <img
-                src="favicon.png"
-                class="card-img-top p-2"
-                style="max-height: 200px; object-fit: cover"
-                alt="..."
-              />
-              <p class="card-text border-top pt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-                numquam minima. Ipsum recusandae culpa corporis dolorem eum
-                totam repellat nisi, nobis earum inventore velit aliquid,
-                officia dolore, reprehenderit architecto. A!
-              </p>
-              <h5 class="card-subtitle fs-6">-Senin, 12 Desember 2012</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Your story content -->
+        <header-title content="Setiap ketukan, sebuah kisah baru."></header-title>
+      <card-story></card-story>
     </main>
 
     <footer>
       <!-- Your footer -->
       <div class="main-footer bg-dark">
-        <div class="container px-3 py-4"><%= footerContent %></div>
+        <div class="container px-3 py-4">
+          <footer-app></footer-app>
+        </div>
       </div>
     </footer>
   </body>
