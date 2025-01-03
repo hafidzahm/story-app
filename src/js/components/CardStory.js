@@ -13,6 +13,14 @@ class CardStory extends LitWithoutShadowDom {
     console.log(this.datas.listStory);
   }
 
+  _dateModifier(createdAt) {
+    const tglAwal = new Date(createdAt);
+    const hari = tglAwal.getDate();
+    const bulan = tglAwal.getMonth() + 1;
+    const tahun = tglAwal.getFullYear();
+    return `${hari}/${bulan}/${tahun}`;
+  }
+
   render() {
     return html`
       <div class="container row gy-3 pb-5 m-auto">
@@ -31,7 +39,9 @@ class CardStory extends LitWithoutShadowDom {
                     alt="..."
                   />
                   <p class="card-text border-top pt-3">${description}</p>
-                  <h5 class="card-subtitle fs-6">-${createdAt}</h5>
+                  <h5 class="card-subtitle fs-6">
+                    -${this._dateModifier(createdAt)}
+                  </h5>
                 </div>
               </div>
             `;
