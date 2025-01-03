@@ -8,11 +8,12 @@ import MyProfile from "./pages/profile/me";
 import AddStory from "./pages/stories/add";
 import * as bootstrap from "bootstrap";
 
+import "./components/component-lit";
+
 const routes = {
   "/": Dashboard,
-  '/profile/me.html': MyProfile,
-  '/stories/add.html': AddStory,
-
+  "/profile/me.html": MyProfile,
+  "/stories/add.html": AddStory,
 };
 
 const detectRoute = () => routes[window.location.pathname];
