@@ -30,16 +30,20 @@
 
  
         <section class="container-md m-auto py-4">
-        <form action="submit" class="container">
-          <div class="input-group row" style="height: 200px">
-            <textarea class="form-control" aria-label="With textarea" placeholder="Tuliskan ceritamu disini..."></textarea></textarea>
+        <form class="container was-validated" novalidate>
+          <div class="input-group has-validation row" style="height: 200px">
+            <textarea class="form-control" id="validationForTextarea" aria-label="With textarea" placeholder="Tuliskan ceritamu disini..." required></textarea>
+            <div class="invalid-feedback">
+              Rangkaian kata-kata cerita jangan kosong
+            </div>
           </div>
-          <div class="input-group row py-3">
+          <div class="input-group row">
             <label for="formFile" class="form-label">Kirimkan foto</label>
-            <input type="file" class="form-control" id="formFile">
+            <input type="file" class="form-control" id="formFile" aria-label="insert photo" required>
+            <div class="invalid-feedback">Foto jangan kosong </div>
           </div>
           <div class="d-grid col-6 mx-auto py-5">
-            <button type="button" class="btn btn-outline-success ">Buat cerita</button>
+            <button type="submit" class="btn btn-outline-success ">Buat cerita</button>
           </div>
           
         </form>
